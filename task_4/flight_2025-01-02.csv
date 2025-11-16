@@ -1,0 +1,3 @@
+aircraft_id,arrival,departure,flight_id,status,load_timestamp
+A320-001,LED,SVO,SU1234,arrived,2025-11-16T23:28:59.049271
+A321-002,SVO,LED,SU5678,cancelled,2025-11-16T23:28:59.049274
