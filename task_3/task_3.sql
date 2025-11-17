@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS dm.telemetry(
     value Float64 COMMENT 'значение параметра',
     to_ts DateTime64(9) DEFAULT now64(9) COMMENT 'время появления записи в clickHouse'
 )
-ENGINE = ReplicatedMergeTree(
+ENGINE = ReplicatedMergeTree( -- можно использовать ReplicatedReplacingMergeTree для идемпотентности при загрузке
     '/clickhouse/tables/{shard}/dm.telemetry',
     '{replica}'
 )
